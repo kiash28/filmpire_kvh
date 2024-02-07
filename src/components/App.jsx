@@ -3,6 +3,7 @@ import { CssBaseline } from '@mui/material';
 import { Route, Switch } from 'react-router-dom';
 import {Actors, Movies, MovieInformation, Profile, NavBar} from './index';
 
+
 import useStyles from './styles'
 
 const App = () => {
