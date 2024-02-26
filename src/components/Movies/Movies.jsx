@@ -31,7 +31,8 @@ const Movies = () => {
 
   if(error) return 'An error has occured'
 
-  console.log( data);
+  console.log("data:", data);
+  console.log("data.resulT:", data.results);
 
   return (
     <div>

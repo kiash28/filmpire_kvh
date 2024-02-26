@@ -7,10 +7,10 @@ export default makeStyles((theme) => ({
 
     },
     toolbar: {
-        height: '70%',
+        height: '70px',
     },
     content: {
         flexGrow: '1',
-        padding: '2em'
+        padding: '2em',
     }
 }));
