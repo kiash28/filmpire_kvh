@@ -25,7 +25,9 @@ const Sidebar = ({ setMobileOpen }) => {
   const dispatch = useDispatch();
   const { GenreIdorCategoryName } = useSelector((state) => state.currentGenreorCategory);
 
-  console.log(GenreIdorCategoryName);
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [GenreIdorCategoryName]);
 
   return (
     <>

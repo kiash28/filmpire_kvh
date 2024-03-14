@@ -24,20 +24,21 @@ export const fetchToken = async () => {
   }
 };
 
+// eslint-disable-next-line consistent-return
 export const createSessionId = async () => {
   const token = localStorage.getItem('request_token');
 
   if (token) {
     try {
-      // eslint-disable-next-line camelcase
       const { data: { session_id } } = await moviesApi.post('authentication/session/new', {
         request_token: token,
       });
+
       localStorage.setItem('session_id', session_id);
 
       return session_id;
     } catch (error) {
-      console.log('sorry could not get your session id');
+      console.log(error);
     }
   }
 };

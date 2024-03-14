@@ -1,20 +1,20 @@
-import React from "react";
-import  ReactDOM  from "react-dom";
-import { BrowserRouter,  } from "react-router-dom";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { Provider } from "react-redux";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import './index.css';
+import ToggleColorModeProvider from './utils/ToggleColorMode';
 
-import App from "./components/App";
-import store from "./app/store";
-
-const theme = createTheme({});
+import App from './components/App';
+import store from './app/store';
 
 ReactDOM.render(
   <Provider store={store}>
-    <ThemeProvider theme={theme}>
+    <ToggleColorModeProvider>
       <BrowserRouter>
-        <App/>
+        <App />
       </BrowserRouter>
-    </ThemeProvider>
+    </ToggleColorModeProvider>
   </Provider>,
-    document.getElementById('root'));
+  document.getElementById('root'),
+);
